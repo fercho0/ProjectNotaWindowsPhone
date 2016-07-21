@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="App_WindowsPh.Principal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App_WindowsPh"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Muestralistnotaphone">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/fondo.jpg"></ImageBrush>
+        </Grid.Background>
+        <Button x:Name="button" Content="Nueva nota&#xD;&#xA;" HorizontalAlignment="Left" Margin="30,36,0,0" VerticalAlignment="Top" Click="AddNota_Click" Height="60" Width="138" Background="#777"/>
+        <Button x:Name="ButDell" Content="Eliminar notas" HorizontalAlignment="Left" Margin="204,36,0,0" VerticalAlignment="Top" Click="DeleteAllNota_Click" Width="167" Height="60" Background="#777"/>
+        <ListBox BorderBrush="#FF141EE4" Height="auto" BorderThickness="2" MaxHeight="580" x:Name="listBox" SelectionChanged="listBox_SelectionChanged" Margin="30,133,29,48" Background="#777">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="Gray" Width="480">
+                        <Border BorderBrush="White" BorderThickness="1">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" x:Name="NameTxt" TextWrapping="Wrap" Text="{Binding Nota}" FontSize="28" Foreground="White"/>
+                               
+                                <TextBlock Grid.Row="0" Text=">" FontSize="28" Margin="0,0,35,0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                                <TextBlock HorizontalAlignment="Right" Margin="0,0,35,0" Grid.Row="3" x:Name="CreateddateTxt"  TextWrapping="Wrap" Text="{Binding CreationDate}" />
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+</Page>

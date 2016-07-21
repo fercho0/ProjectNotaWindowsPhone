@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="App_WindowsPh.UpdateDeleteNota"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App_WindowsPh"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/fondo.jpg"></ImageBrush>
+        </Grid.Background>
+        <Button x:ConnectionId='1' x:Name="button" Content="Actualiza" HorizontalAlignment="Left" Margin="223,568,0,0" VerticalAlignment="Top"                          Width="149" Background="#777"/>
+        <Button x:ConnectionId='2' x:Name="button1" Content="Borra" HorizontalAlignment="Left" Margin="223,0,0,0" VerticalAlignment="Top"                          Width="138" Background="#777"/>
+        <Button x:ConnectionId='3' x:Name="button2" Content="Regresar" HorizontalAlignment="Left" Margin="37,0,0,0" VerticalAlignment="Top"                         Width="138" Background="#777"/>
+        <TextBox x:Name="txtnota" HorizontalAlignment="Left" Margin="37,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="324" Background="#777"/>
+        <TextBox x:Name="txtdescripcion" HorizontalAlignment="Left" Margin="37,177,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="-0.098,-0.002" Width="324" Height="351" Background="#777"/>
+
+    </Grid>
+</Page>
+
